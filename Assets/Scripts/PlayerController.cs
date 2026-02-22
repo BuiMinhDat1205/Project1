@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
     public float speed = 5f;
+    public float normalSpeed;
     public float jumpForce = 12f;
     public float climbSpeed = 4f;
     public float rollSpeed = 8f;
@@ -36,6 +37,8 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        normalSpeed = speed;
+
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
