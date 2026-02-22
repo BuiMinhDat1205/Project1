@@ -5,15 +5,18 @@ TagManager:
   serializedVersion: 3
   tags:
   - Coins
+  - Ground
+  - Ladder
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Ladder
   - 
   - 
   - 
@@ -41,6 +44,15 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Map
+    uniqueID: 1337951653
+    locked: 0
+  - name: Ladder
+    uniqueID: 606998593
+    locked: 0
+  - name: Player
+    uniqueID: 3082462101
     locked: 0
   m_RenderingLayers:
   - Default
