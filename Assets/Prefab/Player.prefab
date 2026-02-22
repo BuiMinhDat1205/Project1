@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  normalSpeed: 0
   jumpForce: 12
   climbSpeed: 4
   rollSpeed: 8
@@ -204,9 +205,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1323f5f1d90c1694aaebbafff709d34a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
-  currentHP: 10
+  maxHP: 20
+  currentHP: 20
   hpText: {fileID: 0}
+  gameOverPanel: {fileID: 0}
 --- !u!114 &8488459480455689594
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,10 +7,15 @@ public class PlayerHealth : MonoBehaviour
     public int currentHP;
     public TMP_Text hpText;
 
+    public GameObject gameOverPanel; // kéo panel vào đây
+
     void Start()
     {
         currentHP = maxHP;
         UpdateUI();
+
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(false);
     }
 
     public void TakeDamage(int amount)
@@ -29,6 +34,7 @@ public class PlayerHealth : MonoBehaviour
     public void AddHP(int amount)
     {
         currentHP += amount;
+
         if (currentHP > maxHP)
             currentHP = maxHP;
 
@@ -44,6 +50,10 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("Player Dead");
-        // Có thể thêm respawn ở đây
+
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(true);
+
+        Time.timeScale = 0f; // dừng game
     }
 }

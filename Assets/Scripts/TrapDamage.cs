@@ -28,6 +28,12 @@ public class TrapDamageSlow : MonoBehaviour
 
             StartCoroutine(DamageCooldown());
         }
+        Enemy enemy = collision.GetComponent<Enemy>();
+
+        if (enemy != null)
+        {
+            enemy.TakeDamage(damage);
+        }
     }
 
     IEnumerator SlowPlayer(PlayerController player)

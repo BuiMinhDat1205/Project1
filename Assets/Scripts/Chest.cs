@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Chest : MonoBehaviour
 {
@@ -9,13 +9,6 @@ public class Chest : MonoBehaviour
 
     private bool playerNear = false;
     private bool opened = false;
-
-    private Animator anim;
-
-    void Start()
-    {
-        anim = GetComponent<Animator>();
-    }
 
     void Update()
     {
@@ -29,16 +22,24 @@ public class Chest : MonoBehaviour
     {
         opened = true;
 
-        if (anim != null)
-            anim.SetTrigger("open");
+        float spacing = 0.6f; // khoảng cách giữa coin
+        float startX = transform.position.x - (coinAmount - 1) * spacing / 2;
 
         for (int i = 0; i < coinAmount; i++)
         {
-            Vector3 spawnPos = transform.position +
-                new Vector3(Random.Range(-0.5f, 0.5f), 1f, 0);
+            Vector3 spawnPos = new Vector3(
+                startX + i * spacing,
+                transform.position.y, // cùng hàng với rương
+                0
+            );
 
             Instantiate(coinPrefab, spawnPos, Quaternion.identity);
         }
+
+        if (pressEText != null)
+            pressEText.SetActive(false);
+
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
