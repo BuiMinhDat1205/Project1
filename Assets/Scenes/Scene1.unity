@@ -501,6 +501,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5278233564531642701, guid: dd32b72ea105f5d4b98c1e497da9f973, type: 3}
+      propertyPath: coinAmount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278233564531642701, guid: dd32b72ea105f5d4b98c1e497da9f973, type: 3}
+      propertyPath: coinPrefab
+      value: 
+      objectReference: {fileID: 8085983245530721226, guid: 7d56ca1fa86afff449ecf83bd39495b3, type: 3}
     - target: {fileID: 7312154218081456992, guid: dd32b72ea105f5d4b98c1e497da9f973, type: 3}
       propertyPath: m_Name
       value: treasure (1)
@@ -8721,6 +8729,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5278233564531642701, guid: dd32b72ea105f5d4b98c1e497da9f973, type: 3}
+      propertyPath: coinAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278233564531642701, guid: dd32b72ea105f5d4b98c1e497da9f973, type: 3}
+      propertyPath: coinPrefab
+      value: 
+      objectReference: {fileID: 2074248088248685087, guid: 16e6cdc22f2a0ad4e8f235fd922b7151, type: 3}
     - target: {fileID: 5278233564531642701, guid: dd32b72ea105f5d4b98c1e497da9f973, type: 3}
       propertyPath: pressEText
       value: 
