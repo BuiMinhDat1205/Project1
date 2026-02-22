@@ -3,9 +3,15 @@ using TMPro;
 
 public class PlayerMoney : MonoBehaviour
 {
-    public int money = 0;
+    public static PlayerMoney Instance;
 
+    public int money = 0;
     public TMP_Text moneyText;
+
+    void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
@@ -16,6 +22,11 @@ public class PlayerMoney : MonoBehaviour
     {
         money += amount;
         UpdateUI();
+    }
+
+    public int GetMoney()
+    {
+        return money;
     }
 
     void UpdateUI()
